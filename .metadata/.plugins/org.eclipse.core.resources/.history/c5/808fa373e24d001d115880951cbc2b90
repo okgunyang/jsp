@@ -1,0 +1,10 @@
+package jspObject;
+
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.PageContext;
+
+public class Ctrl1 {
+	
+	JspWriter out = PageContext.getOut(); 
+	out.println();
+}

@@ -1,0 +1,12 @@
+# jsp
+
+## jsp의 원리
+
+## jsp 언어의 구성
+
+### 디렉티브
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+``` 
+

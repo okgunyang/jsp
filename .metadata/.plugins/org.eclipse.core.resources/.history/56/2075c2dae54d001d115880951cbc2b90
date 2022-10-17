@@ -1,0 +1,126 @@
+# jsp
+
+## jsp의 원리
+
+## jsp 언어의 구성
+디렉티브, 스크립트, jsp 내장 객체, 액션 태그, 태그 라이브러리, EL(표현언어) 등으로 구성된다.
+
+### 디렉티브
+"<%@" 로 시작하고 "%>" 으로 끝나며, 주로 웹 환경 설정시나 라이브러리를 로딩할 때 활용한다.
+
+#### 페이지 디렉티브(page directive)
+```java
+<%!-- jsp page 환경 설정 --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%!-- 패키지 임포트 --%>    
+<%@ page import="java.util.*" %>
+``` 
+
+#### 태그 라이브러리 디렉티브(tag library directive)
+```java
+<%!-- jstl taglib 로딩 --%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+``` 
+
+#### 인클루드 디렉티브(include directive)
+```java
+<%!-- 디렉티브를 활용한 외부 jsp 인클루드 --%>
+<%@ include file="header.jsp" %>
+
+<%!-- 액션태그를 활용한 외부 jsp 인클루드 --%>
+<jsp:include page="header.jsp"></jsp:include>
+``` 
+
+### 스크립트
+자바 코드의 문법에 따라 처리 코드를 작성할 때 활용
+
+#### 선언문
+변수나 객체, 메소드를 정의할 때 활용
+```java
+<%!
+	Student st1;
+%>
+```
+
+#### 스크립트릿(scriptlet)
+자바 처리 코드를 입력시에 활용
+```java
+<%
+	for(int i=0;i<10;i++){
+		out.println("<p>"+i"</p>");	
+	}
+%>
+```
+
+#### 표현식(expression)
+표현식으로서 변수의 값을 출력하거나 계산문에 활용
+```java
+<%=name %>
+<%=request.getParameter("irum") %>
+```
+
+### jsp 내장 객체(9가지)
+| 객체명 | 객체의 역할 |
+|------------|------------------------------------|
+| request | 클라이언트 브라우저에서 전송되어진 정보를 보관하는 객체 |
+| response | 서버 측에서 처리한 정보를 보관하고 처리하기 위한 객체 |
+| out | 웹 언어나 텍스트, 변수값, 객체의 값 등을 브라우저로 출력하기 위한 객체 |
+| session | 클라이언트가 서버에 접속하였을 경우 그 정보를 저장하고 있는 객체 |
+| pageContext | 응답(현재) 페이지 실행에 필요한 정보를 저장하고 있는 객체 |
+| application | 현재의 실행되고 있는 웹 애플리케이션에 관한 정보를 저장하고 있는 객체 |
+| config | 웹 환경 설정에 관한 정보를 저장하고 있는 객체 |
+| page | 특정 웹 페이지에 관한 정보를 저장하고 있는 객체 |
+| exception | jsp 상에서의 예외처리를 할 경우 활용하는 객체 |
+
+#### request 객체
+클라이언트 브라우저에서 전송되어진 정보를 보관하는 객체
+
+
+
+#### response 객체
+
+#### out 객체
+
+#### session 객체
+
+#### pageContext 객체
+현재 페이지에 있는 객체에 대한 값을 저장하고 관리하는 객체
+
+##### 객체  관련 메소드
+| 메소드 | 반환타입 | 설명
+|-------------|------------|------------------------------|
+| getRequest() | ServletRequest | request 기본 객체를 반환 |
+| getResponse() | ServletResponse | response 기본 객체를 반환 |
+| getSession() | HttpSession | session 기본 객체를 반환 |
+| getServletContext() | ServletContext | application 기본 객체를 반환 |
+| getServletConfig() | ServletConfig | config 기본 객체를 반환
+| getOut() | JspWriter | out 기본 객체를 반환 |
+| getException() | Exception | exception 기본 객체를 반환 |
+| getPage() | Object | page 기본 객체를 반환 | 
+| forward(String relativeUrlPath) | void | 지정한 상대경로 페이지로 이동 |
+| include(String relativeUrlPath) | void | 지정한 상대경로 페이지를 현재 JSP 페이지에 포함 |
+
+
+#### application 객체
+
+
+
+#### config 객체
+
+
+
+#### page 객체
+
+
+
+#### exception 객체
+
+
+
+ 
+
+
+
+
