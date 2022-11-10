@@ -1,7 +1,0 @@
-package jspObject;
-
-import javax.servlet.annotation.ServletSecurity;
-
-public class Ctrl1 {
-	
-}

@@ -217,6 +217,8 @@ exception 내장객체는 java.lang.Throwable 클래스 타입의 참조변수�
 | printStackTrace(PrintStream s) | void | 현재 오류의 StackTrace 정보를 PrintStream 객체 s로 출력 |
 | toString() | String | 현재 오류에 대한 간략한 메시지를 String 타입으로 리턴 |
 
+
+
  
 
 
